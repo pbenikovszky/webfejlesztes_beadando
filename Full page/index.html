@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Webfejlesztés zh - Benikovszky Péter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="form__container">
+
+    <div class="form__content" id="login-form">
+
+      <div class="page__login">
+        <form class="login__form" action="login.php" method="post">
+          <h1>Login</h1>
+          <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+          <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+          <input type="submit" value="Login">
+        </form>
+        <div class="flipper" id="btn-showgrade">Milyen jegyet ér?</div>
+      </div>
+
+      <div class="page__jegy">
+        <h2>Ötöst :)</h2>
+        <p>Szerintem megér egy ötöst, az összes feladatot sikerült megoldani.</p>
+        <p>Ezek mellett a php file javascriptet és stílus blokkot is generál :)</p>
+        <div class="flipper" id="btn-back">Vissza a login oldalra</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById('btn-showgrade').addEventListener('click', function showGradePage() {
+      document.getElementById('login-form').classList.add('flipped')
+    })
+
+    document.getElementById('btn-back').addEventListener('click', function showGradePage() {
+      document.getElementById('login-form').classList.remove('flipped')
+    })
+  </script>
+
+</body>
+
+</html>
